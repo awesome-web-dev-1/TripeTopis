@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+    body{
+        @apply bg-white font-poppins text-bodyFontClr
+    }
+}
+
+@layer utilities {
+    .container{
+        @apply px-4  sm:max-w-[720px] md:max-w-[960px] lg:max-w-[1150px] xl:max-w-[1350px] w-full mx-auto
+    }
+    h1,h2,h3,h4{
+        @apply leading-tight text-neutral-800 font-outfit
+    }
+    h1{
+        @apply font-bold text-[38px] xs:text-[46px] md:text-[64px] lg:text-[72px]
+    }
+    h2{
+        @apply text-[28px] sm:text-[48px] font-semibold
+        leading-tight text-balance
+    }
+    .subtitle{
+        @apply text-primaryClr
+    }
+    p{
+        @apply md:text-[18px]
+    }
+    input{
+        @apply outline-none bg-transparent text-inherit
+    }
+    textarea{
+        @apply outline-none w-full
+    }
+    .btn-primary{
+        @apply bg-primaryClr/90 px-8 py-4 text-white rounded-xl transition-colors duration-300 hover:bg-primaryClr inline-block
+    }
+    .btn-secondary{
+        @apply bg-neutral-50 px-8 py-4 ring-1 rounded-xl transition-colors duration-300 text-neutral-950 hover:bg-neutral-200 inline-block
+    }
+    
+}
+
+.header{
+    @apply fixed top-0 left-0 w-full py-5 z-10
+}
+.header.active{
+    @apply bg-white;
+    box-shadow: 0 2px 0 #0002;
+    animation: slideIn forwards 0.5s ease-in-out;
+}
+@keyframes slideIn{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.navbar{
+    @apply flex flex-col md:hidden fixed top-0 left-0 z-10 bg-neutral-50 max-w-[360px] w-full h-[100vh] p-8 translate-x-[-370px] transition-transform duration-500
+}
+.navbar.active{
+    @apply translate-x-0
+}
+.overlay {
+    @apply w-full h-[100vh] bg-neutral-900/70 fixed top-0 left-0 transition-opacity opacity-0 duration-500 pointer-events-none md:hidden z-[9]
+}
+.overlay.active{
+    @apply opacity-100 pointer-events-auto
+}
+.popular-img img{
+    @apply transition-transform duration-300
+}
+.popular-img:is(:hover,:focus) img{
+    transform: scale(1.1);
+}
+.popDesti{
+    grid-template-columns: 1fr 1fr;
+}
+.popDesti li:first-child{
+    grid-column: span 2;
+}
+.popDesti li img{
+    transition: 0.2s;
+}
+.popDesti li:hover img{
+    transform: scale(1.06);
+}
+.popDesti2 li img{
+    transition: 0.2s;
+}
+.popDesti2 li:hover img{
+    transform: scale(1.06);
+}
+
+.faq-text {
+    @apply max-h-0 overflow-hidden transition-all duration-500 ease-in-out;
+}
+
+.faq-text.active {
+    @apply max-h-[300px] opacity-100;
+}
+
+.swiper-pagination-bullet {
+    background-color: #ff5722 !important;
+    opacity: 1;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: #ff9800 !important;
+  }
+  

@@ -897,3 +897,68 @@ export const destinationCard2Item = [
         text:'Our team is available 24/7 to assist you with any queries or concern.'
     },
 ]
+
+
+
+/* ************************
+    Teams and condition
+*********************** */
+
+export const teamsConditionItems = [
+    {
+        id:1,
+        title:'Privacy Policy',
+        text:'This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service. If you choose to use our Service, then you agree to the collection, use, and disclosure of Personal Information if anyone decided to',
+        text2:'If you choose to use our Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.',
+        text3:'The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which are accessible at iRestora Waiter App unless otherwise defined in this Privacy Policy.'
+    },
+    {
+        id:2,
+        title:'Information Collection and Use',
+        text:'This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service. If you choose to use our Service, then you agree to the collection, use, and disclosure of Personal Information if anyone decided to',
+        text2:'If you choose to use our Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.',
+        text3:'The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which are accessible at iRestora Waiter App unless otherwise defined in this Privacy Policy.'
+    },
+    {
+        id:3,
+        title:'Log Data',
+        text:'This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service. If you choose to use our Service, then you agree to the collection, use, and disclosure of Personal Information if anyone decided to',
+        text2:'If you choose to use our Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.',
+        text3:'The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which are accessible at iRestora Waiter App unless otherwise defined in this Privacy Policy.'
+    },
+    {
+        id:4,
+        title:'Cookies',
+        text:'This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service. If you choose to use our Service, then you agree to the collection, use, and disclosure of Personal Information if anyone decided to',
+        text2:'If you choose to use our Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.',
+        text3:'The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which are accessible at iRestora Waiter App unless otherwise defined in this Privacy Policy.'
+    },
+    {
+        id:5,
+        title:'Service Providers',
+        text:'This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service. If you choose to use our Service, then you agree to the collection, use, and disclosure of Personal Information if anyone decided to',
+        text2:'If you choose to use our Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.',
+        text3:'The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which are accessible at iRestora Waiter App unless otherwise defined in this Privacy Policy.'
+    },
+    {
+        id:6,
+        title:'Security',
+        text:'This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service. If you choose to use our Service, then you agree to the collection, use, and disclosure of Personal Information if anyone decided to',
+        text2:'If you choose to use our Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.',
+        text3:'The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which are accessible at iRestora Waiter App unless otherwise defined in this Privacy Policy.'
+    },
+    {
+        id:7,
+        title:'Links to Other Sites',
+        text:'This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service. If you choose to use our Service, then you agree to the collection, use, and disclosure of Personal Information if anyone decided to',
+        text2:'If you choose to use our Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.',
+        text3:'The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which are accessible at iRestora Waiter App unless otherwise defined in this Privacy Policy.'
+    },
+    {
+        id:8,
+        title:'Contact Us',
+        text:'This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service. If you choose to use our Service, then you agree to the collection, use, and disclosure of Personal Information if anyone decided to',
+        text2:'If you choose to use our Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.',
+        text3:'The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which are accessible at iRestora Waiter App unless otherwise defined in this Privacy Policy.'
+    },
+]

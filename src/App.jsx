@@ -13,6 +13,8 @@ import PagesLayout from "./layout/PagesLayout";
 import Contact from "./pages/Contact";
 import BlogSideSec from "./layout/BlogSideSec";
 import ScrollToTop from "./components/sections/ScrollToTop";
+import TeamsCondition from "./pages/TeamsCondition";
+import SignUp from "./pages/SignUp";
 
 
 export default function App() {
@@ -38,6 +40,8 @@ export default function App() {
             <Route path="pricing" element={<Pricing />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="teams&condition" element={<TeamsCondition />} />
+            <Route path="signup" element={<SignUp />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Route>

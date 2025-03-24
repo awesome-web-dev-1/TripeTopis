@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { blogDetailsItem } from "../constant/data";
-import Button from "../components/common/Button";
+import { Link } from "react-router-dom";
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -33,10 +33,10 @@ const BlogDetails = () => {
           ))}
         </div>
         <p className="my-6">{blogPost.text6}</p>
-        <div className="flex gap-4">
+        <div className="flex flex-wrap gap-4">
           <h3 className="font-bold">TAGS:</h3>
           {Object.values(blogPost.tags).map((tag, index) => (
-            <p key={index} className="border border-neutral-700 px-4 py-[5px] rounded-[4px]">{tag}</p>
+            <Link to='/' key={index} className="border border-neutral-700 px-4 py-[5px] rounded-[4px]">{tag}</Link>
           ))}
         </div>
       </div>

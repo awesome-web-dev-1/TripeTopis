@@ -8,7 +8,7 @@ const Destination = () => {
     <>
     <section className='py-[120px]'>
       <div className="container">
-        <ul className='grid grid-cols-3'>
+        <ul className='grid sm:grid-cols-2 md:grid-cols-3 gap-5'>
           {destinationCardItems.map((item)=>(
             <DestinationSecCard key={item.id} imgUrl={item.imgUrl} title={item.title} text={item.text} rate={item.rate} />
           ))}

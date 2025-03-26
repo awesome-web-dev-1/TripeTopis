@@ -1,12 +1,14 @@
-import React from 'react'
-import RightSideBar from './RightSideBar'
+// src/layout/BlogSideSec.jsx
 import { Outlet } from 'react-router-dom'
+import RightSideBar from '../layout/RightSideBar'
 
 const BlogSideSec = () => {
   return (
-    <section className='grid md:grid-cols-[1fr,0.5fr] container py-[120px] gap-20 md:gap-10 md:py-[150px]'>
-        <RightSideBar />
+    <section className='container py-[120px] md:py-[150px]'>
+      <div className='grid md:grid-cols-[1fr,0.4fr] gap-8 lg:gap-12'>
         <Outlet />
+        <RightSideBar />
+      </div>
     </section>
   )
 }

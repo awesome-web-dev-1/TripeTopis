@@ -11,6 +11,7 @@ const Blog = () => {
   const handlePageChange = (newPage) => {
     if (newPage > 0 && newPage <= totalPages) {
       setCurrentPage(newPage);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
@@ -20,30 +21,49 @@ const Blog = () => {
   );
 
   return (
-    <section className="container">
-      <ul className="grid gap-10">
+    <section className="container py-12">
+      {/* Blog Posts Grid */}
+      <ul className="grid gap-10 md:gap-12">
         {currentItems.map((item) => (
           <Card key={item.id} {...item} />
         ))}
       </ul>
 
-      <div className="flex gap-4 my-20 flex-wrap">
-        <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
-          <ChevronLeft />
+      {/* Pagination Controls */}
+      <div className="flex justify-center items-center gap-2 my-20">
+        <button
+          onClick={() => handlePageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+          className="p-2 rounded-full hover:bg-gray-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          aria-label="Previous page"
+        >
+          <ChevronLeft size={20} />
         </button>
-        {[...Array(totalPages)].map((_, i) => (
-          <button
-            key={i}
-            className={`w-10 h-10 grid place-content-center ${
-              currentPage === i + 1 ? "bg-primaryClr text-white" : "text-neutral-800"
-            }`}
-            onClick={() => handlePageChange(i + 1)}
-          >
-            {i + 1}
-          </button>
-        ))}
-        <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
-          <ChevronRight />
+
+        <div className="flex gap-2 mx-4">
+          {Array.from({ length: totalPages }, (_, i) => (
+            <button
+              key={i + 1}
+              className={`w-10 h-10 flex items-center justify-center rounded-full transition-colors ${
+                currentPage === i + 1
+                  ? "bg-primaryClr text-white"
+                  : "text-neutral-800 hover:bg-gray-100"
+              }`}
+              onClick={() => handlePageChange(i + 1)}
+              aria-label={`Go to page ${i + 1}`}
+            >
+              {i + 1}
+            </button>
+          ))}
+        </div>
+
+        <button
+          onClick={() => handlePageChange(currentPage + 1)}
+          disabled={currentPage === totalPages}
+          className="p-2 rounded-full hover:bg-gray-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          aria-label="Next page"
+        >
+          <ChevronRight size={20} />
         </button>
       </div>
     </section>

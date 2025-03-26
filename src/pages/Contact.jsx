@@ -4,33 +4,37 @@ import { Plane } from "lucide-react";
 import Button from "../components/common/Button";
 
 const Contact = () => {
-  const { register, handleSubmit, formState: { errors }, reset } = useForm();
+  const { 
+    register, 
+    handleSubmit, 
+    formState: { errors, isSubmitSuccessful }, 
+    reset 
+  } = useForm();
   const [loading, setLoading] = useState(false);
 
   const onSubmit = async (data) => {
     setLoading(true);
     try {
       console.log("Form Data Submitted:", data);
-      alert("Message sent successfully!");
-      reset(); // Reset form after submission
+      // Form submission logic here (API call, etc.)
+      reset();
     } catch (error) {
       console.error("Error submitting form", error);
-      alert("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <>
+    <div className="contact-page">
       {/* Hero Section */}
       <section className="pt-[120px] md:pt-[150px] pb-[80px]">
-        <div className="container grid gap-[50px] md:grid-cols-2">
+        <div className="container grid gap-[50px] md:grid-cols-2 md:items-center">
           <div>
             <p className="subtitle">GET TO KNOW US</p>
             <h2 className="mt-2">Experience the World With Tourice</h2>
             <p className="mt-4 mb-8">
-              Tourice was born out of a shared passion for exploration and a desire to create meaningful travel experiences. We believe travel is more than just visiting a place; it’s about creating lasting memories.
+              Tourice was born out of a shared passion for exploration and a desire to create meaningful travel experiences. We believe travel is more than just visiting a place; it's about creating lasting memories.
             </p>
 
             <div className="bg-[#DEF2F0] p-8">
@@ -69,6 +73,9 @@ const Contact = () => {
         <div className="container grid sm:grid-cols-2 items-stretch gap-3">
           <div>
             <h2>Get In Touch</h2>
+            {isSubmitSuccessful && (
+              <p className="text-green-500 my-4">Your message has been sent successfully!</p>
+            )}
             <form className="my-6 grid gap-[26px]" onSubmit={handleSubmit(onSubmit)}>
 
               {/* Name Field */}
@@ -129,11 +136,11 @@ const Contact = () => {
 
           {/* Image Section */}
           <div>
-            <img src="/images/contact-img.png" alt="contact image" width={500} height={584} />
+            <img src="/images/contact-page-form-banner.png" alt="contact image" width={500} height={584} className="rounded-lg" />
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

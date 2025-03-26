@@ -3,54 +3,69 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
 
 const FaqSec = () => {
-  const [activeFaq, setActiveFaq] = useState(null); // Track active FAQ toggle
+  const [activeFaq, setActiveFaq] = useState(null);
 
   const toggleFaq = (id) => {
-    setActiveFaq(activeFaq === id ? null : id); // Toggle the specific FAQ item
+    setActiveFaq(activeFaq === id ? null : id);
   };
 
   return (
     <section className="py-[120px] md:py-[150px]">
       <div className="container grid gap-9 md:gap-[60px] md:grid-cols-2 md:items-start">
+        {/* FAQ Header Section */}
         <div>
-          <p className="subtitle">FAQ</p>
-          <h2>Frequently Asked <br /> Questions</h2>
+          <p className="subtitle text-lg font-medium text-gray-500">FAQ</p>
+          <h2 className="text-3xl md:text-4xl font-bold mt-2">
+            Frequently Asked <br /> Questions
+          </h2>
           <div className="mt-6 flex gap-4 xs:gap-[60px]">
-            <div>
-              <img src="/images/faq-img-1.png" alt="" />
-            </div>
-            <div>
-              <img src="/images/faq-img-2.png" alt="" />
-            </div>
+            <img 
+              src="/images/faq-img-1.png" 
+              alt="Decorative illustration" 
+              className="h-auto"
+              loading="lazy"
+            />
+            <img 
+              src="/images/faq-img-2.png" 
+              alt="Decorative illustration" 
+              className="h-auto"
+              loading="lazy"
+            />
           </div>
         </div>
-        <div className="grid gap-[25px]">
-          {faqItems.map((item) => (
-            <div key={item.id} className="border border-neutral-700/15 px-8 py-5 rounded-lg">
-              <div
-                className="flex items-center py-5 justify-between gap-5 text-neutral-700 hover:text-primaryClr focus:text-primaryClr cursor-pointer"
-                onClick={() => toggleFaq(item.id)}
+
+        {/* FAQ Items */}
+        <div className="grid gap-6">
+          {faqItems.map((item) => {
+            const isActive = activeFaq === item.id;
+            return (
+              <div 
+                key={item.id} 
+                className="border border-neutral-700/15 rounded-lg overflow-hidden transition-all"
               >
-                <h3
-                  className={`text-[20px] font-semibold transition-colors duration-300 ${activeFaq === item.id ? "text-primaryClr" : "text-neutral-700"}`}
+                <button
+                  className="flex items-center justify-between w-full px-6 py-5 text-left"
+                  onClick={() => toggleFaq(item.id)}
+                  aria-expanded={isActive}
+                  aria-controls={`faq-content-${item.id}`}
                 >
-                  {item.title}
-                </h3>
-                <button className={`${activeFaq === item.id ? "text-primaryClr" : "text-neutral-700"}`}>
-                  {activeFaq === item.id ?
-                    <ChevronUp  />
-                   : 
-                    <ChevronDown />
-                  }
+                  <h3 className={`text-lg md:text-xl font-semibold transition-colors ${isActive ? 'text-primaryClr' : 'text-neutral-700'}`}>
+                    {item.title}
+                  </h3>
+                  <span className={`ml-4 transition-transform ${isActive ? 'rotate-180' : ''}`}>
+                    {isActive ? <ChevronUp /> : <ChevronDown />}
+                  </span>
                 </button>
+                
+                <div
+                  id={`faq-content-${item.id}`}
+                  className={`px-6 overflow-hidden transition-all duration-300 ${isActive ? 'max-h-[500px] pb-6' : 'max-h-0'}`}
+                >
+                  <p className="text-neutral-700">{item.text}</p>
+                </div>
               </div>
-              <div
-                className={`faq-text ${activeFaq === item.id ? "active" : ""}`}
-              >
-                <p className="pt-[19.5px] pb-[33.5px]">{item.text}</p>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -7,72 +7,115 @@ import RightCard from "../components/blog/RightCard";
 
 const RightSideBar = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const [email, setEmail] = useState("");
 
   const filteredBlogs = blogRightItems.filter((item) =>
     item.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    console.log("Subscribed with email:", email);
+    setEmail("");
+  };
+
   return (
-    <section className='md:order-1'>
-              <div className="container">
-                  <div className="bg-[#F6F6F6] h-[42px] flex items-center relative rounded-[8px] overflow-hidden max-w-[450px] w-full">
-                  <input
-                    type="search"
-                    placeholder="Search"
-                    className="w-full indent-4"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                  />
-                  <button className="absolute top-0 right-0 bottom-0 bg-primaryClr text-white px-3">
-                    <SearchIcon />
-                  </button>
-              </div>
-
-              <ul className='flex flex-col gap-4 my-8'>
-                <h3 className='text-[24px] font-semibold'>Category</h3>
-                {blogPageItem.map((item)=>(
-                  <li key={item.id}>
-                    <Link to=''>{item.text}</Link>
-                  </li>
-                ))}
-              </ul>
-
-
-              <ul className="grid gap-10 mb-8">
-                <h3 className="text-[24px] font-semibold">Recent News</h3>
-                {filteredBlogs.map((item) => (
-                  <RightCard
-                    imgUrl={item.imgUrl}
-                    title={item.title}
-                    date={item.publisheDate}
-                    key={item.id}
-                  />
-                ))}
-              </ul>
-
-
-              <div className=''>
-                <h3 className='text-[24px] font-semibold mb-10'>Tags</h3>
-                <div className="flex flex-wrap gap-4">
-                {blogTagItems.map((item)=>(
-                  <div key={item.id} className='grid'>
-                    <Link to='' className='bg-[#F6F6F6] px-[17px] py-2 rounded-md text-neutral-950 font-semibold hover:bg-[#f6f6f690] transition-colors'>{item.tag}</Link>
-                    </div>
-                ))}
-                </div>
-              </div>
-
-              <div className="mt-5">
-                <img src="/images/ad-img.png" alt="ad banner" />
-              </div>
-
-              <div className="mt-8">
-                <h3 className='text-[24px] font-semibold mb-4'>NewsLetter</h3>
-                <input type="email" placeholder='Enter your email here' className='border w-full mb-8 h-[40px] indent-4 bg-white' required />
-                <Button className={'w-full block text-center py-[9px] rounded-[9px] bg-secodaryClr text-white hover:bg-secodaryClr/90 transition-colors duration-200'} label={"Subscribe"} path='' />
-              </div>
+    <aside className="md:order-1">
+      <div className="space-y-8">
+        {/* Search Bar */}
+        <div className="relative max-w-[450px]">
+          <div className="bg-[#F6F6F6] h-[42px] flex items-center rounded-[8px] overflow-hidden">
+            <input
+              type="search"
+              placeholder="Search"
+              className="w-full h-full indent-4 bg-transparent outline-none"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              aria-label="Search blog posts"
+            />
+            <button 
+              className="absolute top-0 right-0 bottom-0 bg-primaryClr text-white px-3 flex items-center justify-center"
+              aria-label="Search"
+            >
+              <SearchIcon size={18} />
+            </button>
           </div>
-    </section>
-  )
-}
+        </div>
 
-export default RightSideBar
+        {/* Categories */}
+        <div>
+          <h3 className="text-2xl font-semibold mb-4">Category</h3>
+          <ul className="space-y-3">
+            {blogPageItem.map((item) => (
+              <li key={item.id}>
+                <Link 
+                  to={`/blog/category/${item.id}`} 
+                  className="text-gray-700 hover:text-primaryClr transition-colors"
+                >
+                  {item.text}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Recent News */}
+        <div>
+          <h3 className="text-2xl font-semibold mb-4">Recent News</h3>
+          <ul className="space-y-6">
+            {filteredBlogs.map((item) => (
+              <RightCard
+                key={item.id}
+                imgUrl={item.imgUrl}
+                title={item.title}
+                date={item.publisheDate}
+              />
+            ))}
+          </ul>
+        </div>
+
+        {/* Tags */}
+        <div>
+          <h3 className="text-2xl font-semibold mb-4">Tags</h3>
+          <div className="flex flex-wrap gap-3">
+            {blogTagItems.map((item) => (
+              <Link 
+                key={item.id} 
+                to={`/blog/tag/${item.tag.toLowerCase()}`}
+                className="bg-[#F6F6F6] px-4 py-2 rounded-md text-neutral-950 font-medium hover:bg-[#f6f6f690] transition-colors"
+              >
+                {item.tag}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Advertisement */}
+        <div>
+          <img 
+            src="/images/ad-img.png" 
+            alt="Advertisement" 
+            className="w-full h-auto rounded-lg"
+            loading="lazy"
+          />
+        </div>
+
+        {/* Newsletter */}
+        <form onSubmit={handleSubscribe}>
+          <h3 className="text-2xl font-semibold mb-4">NewsLetter</h3>
+          <input 
+            type="email" 
+            placeholder="Enter your email here" 
+            className="border w-full mb-4 h-10 px-4 bg-white rounded-md outline-none focus:ring-1 focus:ring-primaryClr"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <Button className={'w-full block text-center py-[9px] rounded-[9px] bg-secodaryClr text-white hover:bg-secodaryClr/90 transition-colors duration-200'} label={"Subscribe"} path='' type='submit'/>
+        </form>
+      </div>
+    </aside>
+  );
+};
+
+export default RightSideBar;

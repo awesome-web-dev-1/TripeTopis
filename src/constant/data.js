@@ -197,21 +197,21 @@ export const testimonialsItem = [
 export const blogSecItems = [
     {
         id:1,
-        imgUrl:'/images/blog-img-1.png',
+        imgUrl:'/images/blog-img-1.jpg',
         subText:'Solo Travel.Sep 19, 2024',
         title:'The Beaten Path Discoveries in Heartland',
         text:'Browse through our handpicked selection of destinations and tour packages, each designed to inspire and delight.'
     },
     {
         id:2,
-        imgUrl:'/images/blog-img-2.png',
+        imgUrl:'/images/blog-img-2.jpg',
         subText:'Solo Travel.Sep 19, 2024',
         title:'The Best Destinations for Memorable Vacations.',
         text:'Browse through our handpicked selection of destinations'
     },
     {
         id:3,
-        imgUrl:'/images/blog-img-3.png',
+        imgUrl:'/images/blog-img-3.jpg',
         subText:'Solo Travel. Sep 19, 2024',
         title:'Luxurious Beachfront Retreats and Wonders',
         text:'Browse through our handpicked selection of destinations'
@@ -457,11 +457,9 @@ export const blogTagItems = [
     },
 ]
 
-/*===============================
-===============================
+/* *****************************
     Blog details page
-===============================
-=============================== */
+***************************** */
 export const blogDetailsItem = [
     {
         id:1,
@@ -475,8 +473,8 @@ export const blogDetailsItem = [
         name:'— Someone famous in - Peter Parker',
         title3:'Pamukkale Paradise: Soaking in the Natural Thermal Springs and Cotton Castle Terraces',
         text5:'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con quis nostrud exercitation quis nostrud exUt enim ad minim veniam, quis nostrud exercitationUt enim ad minim veniam, quis nostrud Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodocon quis nostrude',
-        imgUrl2:'',
-        imgUrl3:'',
+        imgUrl2:'/images/blog-img-1.jpg',
+        imgUrl3:'/images/blog-img-2.jpg',
         text6:'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con quis nostrud exercitation quis nostrud exUt enim ad minim veniam, quis nostrud exercitationUt enim ad minim veniam, quis nostrud Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodocon quis nostrud e',
         tags:{
             tag1:'Agriculture',
@@ -484,9 +482,9 @@ export const blogDetailsItem = [
             tag3:'Business',
             tag4:'Design'
         },
-        commentImg1:'/images/',
-        commentImg2:'/images/',
-        commentImg3:'/images/',
+        commentImg1:'/images/profile-1.png',
+        commentImg2:'/images/profile-2.png',
+        commentImg3:'/images/profile-3.png',
         commentName1:'Ronald Richards',
         commentName2:'Leslie Alexander',
         commentName3:'Annette Black',
@@ -507,18 +505,18 @@ export const blogDetailsItem = [
         name:'— Someone famous in - Peter Parker',
         title3:'Pamukkale Paradise: Soaking in the Natural Thermal Springs and Cotton Castle Terraces',
         text5:'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con quis nostrud exercitation quis nostrud exUt enim ad minim veniam, quis nostrud exercitationUt enim ad minim veniam, quis nostrud Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodocon quis nostrude',
-        imgUrl2:'',
-        imgUrl3:'',
+        imgUrl2:'/images/blog-img-1.jpg',
+        imgUrl3:'/images/blog-img-2.jpg',
         text6:'',
         tags:{
-            tag1:'',
-            tag2:'',
-            tag3:'',
-            tag4:''
+            tag1:'Agriculture',
+            tag2:'Digital Nomad',
+            tag3:'Business',
+            tag4:'Design'
         },
-        commentImg1:'/images/',
-        commentImg2:'/images/',
-        commentImg3:'/images/',
+        commentImg1:'/images/profile-1.png',
+        commentImg2:'/images/profile-2.png',
+        commentImg3:'/images/profile-3.png',
         commentName1:'Ronald Richards',
         commentName2:'Leslie Alexander',
         commentName3:'Annette Black',
@@ -539,18 +537,18 @@ export const blogDetailsItem = [
         name:'— Someone famous in - Peter Parker',
         title3:'Pamukkale Paradise: Soaking in the Natural Thermal Springs and Cotton Castle Terraces',
         text5:'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con quis nostrud exercitation quis nostrud exUt enim ad minim veniam, quis nostrud exercitationUt enim ad minim veniam, quis nostrud Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodocon quis nostrude',
-        imgUrl2:'',
-        imgUrl3:'',
+        imgUrl2:'/images/blog-img-1.jpg',
+        imgUrl3:'/images/blog-img-2.jpg',
         text6:'',
         tags:{
-            tag1:'',
-            tag2:'',
-            tag3:'',
-            tag4:''
+            tag1:'Agriculture',
+            tag2:'Digital Nomad',
+            tag3:'Business',
+            tag4:'Design'
         },
-        commentImg1:'/images/',
-        commentImg2:'/images/',
-        commentImg3:'/images/',
+        commentImg1:'/images/profile-1.png',
+        commentImg2:'/images/profile-2.png',
+        commentImg3:'/images/profile-3.png',
         commentName1:'Ronald Richards',
         commentName2:'Leslie Alexander',
         commentName3:'Annette Black',
@@ -570,18 +568,18 @@ export const blogDetailsItem = [
         name:'— Someone famous in - Peter Parker',
         title3:'Pamukkale Paradise: Soaking in the Natural Thermal Springs and Cotton Castle Terraces',
         text5:'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con quis nostrud exercitation quis nostrud exUt enim ad minim veniam, quis nostrud exercitationUt enim ad minim veniam, quis nostrud Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodocon quis nostrude',
-        imgUrl2:'',
-        imgUrl3:'',
+        imgUrl2:'/images/blog-img-1.jpg',
+        imgUrl3:'/images/blog-img-2.jpg',
         text6:'',
         tags:{
-            tag1:'',
-            tag2:'',
-            tag3:'',
-            tag4:''
+            tag1:'Agriculture',
+            tag2:'Digital Nomad',
+            tag3:'Business',
+            tag4:'Design'
         },
-        commentImg1:'/images/',
-        commentImg2:'/images/',
-        commentImg3:'/images/',
+        commentImg1:'/images/profile-1.png',
+        commentImg2:'/images/profile-2.png',
+        commentImg3:'/images/profile-3.png',
         commentName1:'Ronald Richards',
         commentName2:'Leslie Alexander',
         commentName3:'Annette Black',
@@ -601,18 +599,18 @@ export const blogDetailsItem = [
         name:'— Someone famous in - Peter Parker',
         title3:'Pamukkale Paradise: Soaking in the Natural Thermal Springs and Cotton Castle Terraces',
         text5:'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con quis nostrud exercitation quis nostrud exUt enim ad minim veniam, quis nostrud exercitationUt enim ad minim veniam, quis nostrud Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodocon quis nostrude',
-        imgUrl2:'',
-        imgUrl3:'',
+        imgUrl2:'/images/blog-img-1.jpg',
+        imgUrl3:'/images/blog-img-2.jpg',
         text6:'',
         tags:{
-            tag1:'',
-            tag2:'',
-            tag3:'',
-            tag4:''
+            tag1:'Agriculture',
+            tag2:'Digital Nomad',
+            tag3:'Business',
+            tag4:'Design'
         },
-        commentImg1:'/images/',
-        commentImg2:'/images/',
-        commentImg3:'/images/',
+        commentImg1:'/images/profile-1.png',
+        commentImg2:'/images/profile-2.png',
+        commentImg3:'/images/profile-3.png',
         commentName1:'Ronald Richards',
         commentName2:'Leslie Alexander',
         commentName3:'Annette Black',
@@ -632,18 +630,18 @@ export const blogDetailsItem = [
         name:'— Someone famous in - Peter Parker',
         title3:'Pamukkale Paradise: Soaking in the Natural Thermal Springs and Cotton Castle Terraces',
         text5:'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con quis nostrud exercitation quis nostrud exUt enim ad minim veniam, quis nostrud exercitationUt enim ad minim veniam, quis nostrud Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodocon quis nostrude',
-        imgUrl2:'',
-        imgUrl3:'',
+        imgUrl2:'/images/blog-img-1.jpg',
+        imgUrl3:'/images/blog-img-2.jpg',
         text6:'',
         tags:{
-            tag1:'',
-            tag2:'',
-            tag3:'',
-            tag4:''
+            tag1:'Agriculture',
+            tag2:'Digital Nomad',
+            tag3:'Business',
+            tag4:'Design'
         },
-        commentImg1:'/images/',
-        commentImg2:'/images/',
-        commentImg3:'/images/',
+        commentImg1:'/images/profile-1.png',
+        commentImg2:'/images/profile-2.png',
+        commentImg3:'/images/profile-3.png',
         commentName1:'Ronald Richards',
         commentName2:'Leslie Alexander',
         commentName3:'Annette Black',
@@ -663,18 +661,18 @@ export const blogDetailsItem = [
         name:'— Someone famous in - Peter Parker',
         title3:'Pamukkale Paradise: Soaking in the Natural Thermal Springs and Cotton Castle Terraces',
         text5:'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con quis nostrud exercitation quis nostrud exUt enim ad minim veniam, quis nostrud exercitationUt enim ad minim veniam, quis nostrud Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodocon quis nostrude',
-        imgUrl2:'',
-        imgUrl3:'',
+        imgUrl2:'/images/blog-img-1.jpg',
+        imgUrl3:'/images/blog-img-2.jpg',
         text6:'',
         tags:{
-            tag1:'',
-            tag2:'',
-            tag3:'',
-            tag4:''
+            tag1:'Agriculture',
+            tag2:'Digital Nomad',
+            tag3:'Business',
+            tag4:'Design'
         },
-        commentImg1:'/images/',
-        commentImg2:'/images/',
-        commentImg3:'/images/',
+        commentImg1:'/images/profile-1.png',
+        commentImg2:'/images/profile-2.png',
+        commentImg3:'/images/profile-3.png',
         commentName1:'Ronald Richards',
         commentName2:'Leslie Alexander',
         commentName3:'Annette Black',
@@ -694,18 +692,18 @@ export const blogDetailsItem = [
         name:'— Someone famous in - Peter Parker',
         title3:'Pamukkale Paradise: Soaking in the Natural Thermal Springs and Cotton Castle Terraces',
         text5:'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con quis nostrud exercitation quis nostrud exUt enim ad minim veniam, quis nostrud exercitationUt enim ad minim veniam, quis nostrud Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodocon quis nostrude',
-        imgUrl2:'',
-        imgUrl3:'',
+        imgUrl2:'/images/blog-img-1.jpg',
+        imgUrl3:'/images/blog-img-2.jpg',
         text6:'',
         tags:{
-            tag1:'',
-            tag2:'',
-            tag3:'',
-            tag4:''
+            tag1:'Agriculture',
+            tag2:'Digital Nomad',
+            tag3:'Business',
+            tag4:'Design'
         },
-        commentImg1:'/images/',
-        commentImg2:'/images/',
-        commentImg3:'/images/',
+        commentImg1:'/images/profile-1.png',
+        commentImg2:'/images/profile-2.png',
+        commentImg3:'/images/profile-3.png',
         commentName1:'Ronald Richards',
         commentName2:'Leslie Alexander',
         commentName3:'Annette Black',
@@ -725,18 +723,18 @@ export const blogDetailsItem = [
         name:'— Someone famous in - Peter Parker',
         title3:'Pamukkale Paradise: Soaking in the Natural Thermal Springs and Cotton Castle Terraces',
         text5:'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con quis nostrud exercitation quis nostrud exUt enim ad minim veniam, quis nostrud exercitationUt enim ad minim veniam, quis nostrud Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodocon quis nostrude',
-        imgUrl2:'',
-        imgUrl3:'',
+        imgUrl2:'/images/blog-img-1.jpg',
+        imgUrl3:'/images/blog-img-2.jpg',
         text6:'',
         tags:{
-            tag1:'',
-            tag2:'',
-            tag3:'',
-            tag4:''
+            tag1:'Agriculture',
+            tag2:'Digital Nomad',
+            tag3:'Business',
+            tag4:'Design'
         },
-        commentImg1:'/images/',
-        commentImg2:'/images/',
-        commentImg3:'/images/',
+        commentImg1:'/images/profile-1.png',
+        commentImg2:'/images/profile-2.png',
+        commentImg3:'/images/profile-3.png',
         commentName1:'Ronald Richards',
         commentName2:'Leslie Alexander',
         commentName3:'Annette Black',
@@ -748,11 +746,9 @@ export const blogDetailsItem = [
 ]
 
 
-/*===============================
-===============================
+/* *******************************
     About page
-===============================
-=============================== */
+******************************* */
 
 export const aboutPageItems = [
     {

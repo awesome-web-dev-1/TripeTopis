@@ -11,7 +11,7 @@ const BlogSec = () => {
                 {blogSecItems.map((item)=>(
                     <li key={item.id}>
                         <div className="rounded-[12px] overflow-hidden">
-                          <img src={item.imgUrl} alt={item.title} className="w-full" />
+                          <img src={item.imgUrl} alt={item.title} className="w-full h-full" />
                         </div>
 
                         <div className="">

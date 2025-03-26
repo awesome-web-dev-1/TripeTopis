@@ -4,8 +4,11 @@
 
 
 @layer base{
+    html{
+        @apply overflow-x-hidden
+    }
     body{
-        @apply bg-white font-poppins text-bodyFontClr
+        @apply bg-white font-poppins text-bodyFontClr overflow-x-hidden
     }
 }
 

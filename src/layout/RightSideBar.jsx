@@ -1,4 +1,3 @@
-// src/components/blog/RightSideBar.jsx
 import { useState } from "react";
 import { SearchIcon } from "lucide-react";
 import { blogPageItem, blogRightItems, blogTagItems } from "../constant/data";
@@ -10,60 +9,49 @@ const RightSideBar = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [email, setEmail] = useState("");
 
-  const filteredBlogs = blogRightItems.filter(item =>
+  const filteredBlogs = blogRightItems.filter((item) =>
     item.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   const handleSubscribe = (e) => {
     e.preventDefault();
-    console.log("Subscribed with:", email);
+    console.log("Subscribed with email:", email);
     setEmail("");
   };
 
   return (
-    <aside className="space-y-8">
-      {/* Search */}
-      <div className="relative">
-        <div className="bg-gray-100 h-12 flex items-center rounded-lg overflow-hidden">
+    <section className='md:order-1'>
+      <div className="container">
+        {/* Search */}
+        <div className="bg-[#F6F6F6] h-[42px] flex items-center relative rounded-[8px] overflow-hidden max-w-[450px] w-full">
           <input
             type="search"
-            placeholder="Search articles..."
-            className="w-full h-full px-4 bg-transparent outline-none"
+            placeholder="Search"
+            className="w-full indent-4 bg-transparent outline-none"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            aria-label="Search blog posts"
           />
-          <button 
-            className="absolute right-0 top-0 bottom-0 bg-primary text-white px-4 flex items-center justify-center"
-            aria-label="Search"
-          >
+          <button className="absolute top-0 right-0 bottom-0 bg-primaryClr text-white px-3">
             <SearchIcon size={18} />
           </button>
         </div>
-      </div>
 
-      {/* Categories */}
-      <div>
-        <h3 className="text-xl font-bold mb-4">Categories</h3>
-        <ul className="space-y-2">
-          {blogPageItem.map(item => (
+        {/* Categories */}
+        <ul className='flex flex-col gap-4 my-8'>
+          <h3 className='text-[24px] font-semibold'>Category</h3>
+          {blogPageItem.map((item) => (
             <li key={item.id}>
-              <Link 
-                to={`/blog/category/${item.id}`}
-                className="text-gray-700 hover:text-primary transition-colors block py-2"
-              >
+              <Link to='' className="hover:text-primaryClr transition-colors">
                 {item.text}
               </Link>
             </li>
           ))}
         </ul>
-      </div>
 
-      {/* Recent Posts */}
-      <div>
-        <h3 className="text-xl font-bold mb-4">Recent Posts</h3>
-        <div className="space-y-4">
-          {filteredBlogs.map(item => (
+        {/* Recent News */}
+        <ul className="grid gap-10 mb-8">
+          <h3 className="text-[24px] font-semibold">Recent News</h3>
+          {filteredBlogs.map((item) => (
             <RightCard
               key={item.id}
               imgUrl={item.imgUrl}
@@ -71,45 +59,48 @@ const RightSideBar = () => {
               date={item.publisheDate}
             />
           ))}
+        </ul>
+
+        {/* Tags */}
+        <div>
+          <h3 className='text-[24px] font-semibold mb-10'>Tags</h3>
+          <div className="flex flex-wrap gap-4">
+            {blogTagItems.map((item) => (
+              <div key={item.id} className='grid'>
+                <Link to='' className='bg-[#F6F6F6] px-[17px] py-2 rounded-md text-neutral-950 font-semibold hover:bg-[#f6f6f690] transition-colors'>
+                  {item.tag}
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Ad Banner */}
+        <div className="mt-5">
+          <img src="/images/ad-img.png" alt="ad banner" loading="lazy" />
+        </div>
+
+        {/* Newsletter */}
+        <div className="mt-8">
+          <h3 className='text-[24px] font-semibold mb-4'>NewsLetter</h3>
+          <form onSubmit={handleSubscribe}>
+            <input 
+              type="email" 
+              placeholder='Enter your email here' 
+              className='border w-full mb-8 h-[40px] indent-4 bg-white rounded-md'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required 
+            />
+            <Button 
+              className="w-full text-center py-[9px] rounded-[9px] bg-secodaryClr text-white hover:bg-secodaryClr/90 transition-colors duration-200"
+              label="Subscribe"
+              type="submit"
+            />
+          </form>
         </div>
       </div>
-
-      {/* Tags */}
-      <div>
-        <h3 className="text-xl font-bold mb-4">Tags</h3>
-        <div className="flex flex-wrap gap-2">
-          {blogTagItems.map(item => (
-            <Link
-              key={item.id}
-              to={`/blog/tag/${item.tag.toLowerCase()}`}
-              className="bg-gray-100 px-3 py-1 rounded-md text-sm hover:bg-gray-200 transition-colors"
-            >
-              {item.tag}
-            </Link>
-          ))}
-        </div>
-      </div>
-
-      {/* Newsletter */}
-      <div className="bg-gray-50 p-6 rounded-lg">
-        <h3 className="text-xl font-bold mb-4">Newsletter</h3>
-        <form onSubmit={handleSubscribe}>
-          <input
-            type="email"
-            placeholder="Your email address"
-            className="w-full px-4 py-2 mb-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <Button 
-            type="submit"
-            className="w-full"
-            label="Subscribe"
-          />
-        </form>
-      </div>
-    </aside>
+    </section>
   );
 };
 

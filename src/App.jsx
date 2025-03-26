@@ -1,6 +1,4 @@
-// src/App.jsx
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { AuthProvider } from "../src/components/context/AuthContext";
 import Layout from "./layout/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -17,46 +15,35 @@ import BlogSideSec from "./layout/BlogSideSec";
 import ScrollToTop from "./components/sections/ScrollToTop";
 import TeamsCondition from "./pages/TeamsCondition";
 import SignUp from "./pages/SignUp";
-/* import Login from "./pages/Login"; // You'll need to create this */
-import ProtectedRoute from "./components/auth/ProtectedRoute";
 
 export default function App() {
   return (
     <BrowserRouter>
-      <AuthProvider>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            
-            {/* Public Pages */}
-            {/* <Route path="login" element={<Login />} /> */}
-            <Route path="signup" element={<SignUp />} />
-            <Route path="faq" element={<Faq />} />
-            
-            {/* Pages Layout - Some protected, some public */}
-            <Route path="/" element={<PagesLayout />}>
-              {/* Blog Section */}
-              <Route path="blog" element={<BlogSideSec />}>
-                <Route index element={<Blog />} />
-                <Route path=":id" element={<BlogDetails />} />
-              </Route>
-
-              {/* Protected Routes */}
-              <Route element={<ProtectedRoute />}>
-                <Route path="destination" element={<Destination />} />
-                <Route path="destination/:id" element={<DestinationDetails />} />
-                <Route path="pricing" element={<Pricing />} />
-                <Route path="about" element={<About />} />
-                <Route path="contact" element={<Contact />} />
-                <Route path="teams&condition" element={<TeamsCondition />} />
-              </Route>
-              
-              <Route path="*" element={<NotFound />} />
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          
+          <Route path="/" element={<PagesLayout />}>
+            {/* Blog Section */}
+            <Route path="blog" element={<BlogSideSec />}>
+              <Route index element={<Blog />} />
+              <Route path=":id" element={<BlogDetails />} />
             </Route>
+
+            {/* Other Pages */}
+            <Route path="destination" element={<Destination />} />
+            <Route path="destination/:id" element={<DestinationDetails />} />
+            <Route path="faq" element={<Faq />} />
+            <Route path="pricing" element={<Pricing />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="teams&condition" element={<TeamsCondition />} />
+            <Route path="signup" element={<SignUp />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
-        </Routes>
-      </AuthProvider>
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 }

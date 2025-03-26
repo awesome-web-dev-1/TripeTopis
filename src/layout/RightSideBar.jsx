@@ -93,7 +93,7 @@ const RightSideBar = () => {
               required 
             />
             <Button 
-              className="w-full text-center py-[9px] rounded-[9px] bg-secodaryClr text-white hover:bg-secodaryClr/90 transition-colors duration-200"
+            className='bg-secodaryClr text-white block text-center py-2 rounded-lg hover:bg-secodaryClr/90 transition-colors'
               label="Subscribe"
               type="submit"
             />

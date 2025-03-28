@@ -18,19 +18,23 @@ const FaqSec = () => {
           <h2 className="text-3xl md:text-4xl font-bold mt-2">
             Frequently Asked <br /> Questions
           </h2>
-          <div className="mt-6 flex gap-4 xs:gap-[60px]">
+          <div className="flex gap-6 mt-10">
+            <div className="">
             <img 
               src="/images/faq-img-1.png" 
               alt="Decorative illustration" 
-              className="h-auto"
+              className=""
               loading="lazy"
             />
+            </div>
+            <div className="">
             <img 
               src="/images/faq-img-2.png" 
               alt="Decorative illustration" 
-              className="h-auto"
+              className=""
               loading="lazy"
             />
+            </div>
           </div>
         </div>
 

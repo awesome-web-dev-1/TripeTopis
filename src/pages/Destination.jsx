@@ -54,7 +54,7 @@ const Destination = () => {
               <img 
                 src="/images/destination-page-banner.png" 
                 alt="Travel destinations showcase"
-                className="max-w-full h-auto rounded-lg shadow-md"
+                className="max-w-full h-auto rounded-lg"
                 loading="lazy"
               />
             </div>

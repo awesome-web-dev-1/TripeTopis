@@ -13,6 +13,7 @@ const PagesBg = () => {
     "/contact": "Contact",
     "/teams&condition": "Teams & Condition",
     "/signup": "Sign Up",
+    "/terms&condition": "Terms & condition",
   };
 
   let pageTitle = "Error";

@@ -14,7 +14,7 @@
 
 @layer utilities {
     .container{
-        @apply px-4  sm:max-w-[720px] md:max-w-[960px] lg:max-w-[1150px] xl:max-w-[1350px] w-full mx-auto
+        @apply px-4  sm:max-w-[720px] md:max-w-[960px] lg:max-w-[1140px] xl:max-w-[1350px] w-full mx-auto
     }
     h1,h2,h3,h4{
         @apply leading-tight text-neutral-800 font-outfit
@@ -117,4 +117,10 @@
   .swiper-pagination-bullet-active {
     background-color: #ff9800 !important;
   }
+.dropdown-menu{
+    transition: all 0.3s ease;
+}
+.dropdown-container:hover .dropdown-menu{
+    display: block;
+}
   

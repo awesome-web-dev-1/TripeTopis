@@ -32,6 +32,8 @@ const Hero = () => {
             alt="Travelers enjoying a tour" 
             className="max-w-full h-auto"
             loading="eager"
+            width={550}
+            height={700}
           />
         </figure>
       </div>

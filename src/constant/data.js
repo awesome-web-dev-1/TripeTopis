@@ -21,6 +21,12 @@ export const navItems = [
     },
     {
         id:5,
+        label:'Pages',
+        path:'pages',
+        hasDropDown:true
+    },
+    {
+        id:6,
         label:'Contact',
         path:'contact',
     },

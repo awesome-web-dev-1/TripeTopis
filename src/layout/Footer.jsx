@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="container grid gap-5 sm:grid-cols-2 md:grid-cols-3">
         <div className="text-white">
           <a href="">
-            <img src="/images/footer-logo.png" alt="footer logo image" />
+            <img src="/images/footer-logo.png" alt="footer logo image" className='max-w-max' />
           </a>
           <p className='my-[11.5px] max-w-[268.64px]'>Hello, we are Lift Media. Our goal is to translate the positive effects from revolutionizing</p>
 

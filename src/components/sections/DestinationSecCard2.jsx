@@ -3,8 +3,8 @@ import React from 'react'
 const DestinationSecCard2 = ({imgUrl,title,text}) => {
   return (
     <li className='grid gap-4'>
-        <div className="">
-            <img src={imgUrl} alt={title} />
+        <div className="max-w-max">
+            <img src={imgUrl} className='' alt={title} />
         </div>
 
         <div className="grid gap-4">

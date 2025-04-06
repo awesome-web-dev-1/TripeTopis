@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+
 @layer base{
     html{
         @apply overflow-x-hidden
@@ -17,7 +18,7 @@
         @apply px-4  sm:max-w-[720px] md:max-w-[960px] lg:max-w-[1140px] xl:max-w-[1350px] w-full mx-auto
     }
     h1,h2,h3,h4{
-        @apply leading-tight text-neutral-800 font-outfit
+        @apply leading-tight text-neutral-800 font-poppins
     }
     h1{
         @apply font-bold text-[38px] xs:text-[46px] md:text-[64px] lg:text-[72px]
@@ -31,6 +32,9 @@
     }
     p{
         @apply md:text-[18px]
+    }
+    img{
+        @apply w-full
     }
     input{
         @apply outline-none bg-transparent text-inherit
